@@ -1,21 +1,21 @@
-const tilesContainer = document.querySelector(".tiles");
+const tilesContainer = document.querySelector(".tiles"); //Document Object Model
 const colors = ["lightsteelblue", "darkgoldenrod", "khaki", "grey", "olivedrab", "steelblue", "darkslategray", "mediumaquamarine" ];
 const colorsPicklist = [...colors, ...colors]; // spread operator: allows us to display each color twice
 const tileCount = colorsPicklist.length;
 
-// Game State
+///// Game State
 let revealedCount = 0;
 let activeTile = null; // the tile the user has initially clicked on, to be matched
 let awaitingEndOfMove = false;
 
-// Build the tile
+///// Build the tile
 function buildTile(color) {
   const element = document.createElement("div"); // We are using the DOM to create new div/tiles
   element.classList.add("tile");
   element.setAttribute("data-color", color);
   element.setAttribute("data-revealed", "false"); // The tile is currently not revealed
 
-
+  // User clicks
   element.addEventListener("click", () => { 
     const revealed = element.getAttribute("data-revealed");
     
@@ -33,7 +33,7 @@ function buildTile(color) {
       return; // the end of the primary tile move
     }
 
-    // Match Logic
+    ///// Match Logic
     const colorToMatch = activeTile.getAttribute("data-color");
     
     if (colorToMatch === color) { // If colors match,
@@ -45,7 +45,9 @@ function buildTile(color) {
       revealedCount += 2; // and add two to the count.
 
       if (revealedCount === tileCount) { // If all tiles are revealed, alert the User
-        alert("You Win! Refresh to play again.");
+        alert("You Win! The DOM is an object that represents the HTML page seen in the web browser. JavaScript can access the DOM dynamically (after the HTML loads) to change the content, structure, and style of the webpage.");
+        alert("These game tiles don't actually exist inside of the HTML document--they exist in the JavaScript! Neat!");
+        alert("Thanks for playing! Refresh to play again.");
       }
 
       return;
