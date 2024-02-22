@@ -1,5 +1,5 @@
 const tilesContainer = document.querySelector(".tiles"); //Document Object Model
-const colors = ["lightsteelblue", "darkgoldenrod", "khaki", "grey", "olivedrab", "steelblue", "darkslategray", "mediumaquamarine" ];
+const colors = ["lightsteelblue", "indigo", "khaki", "darkorange", "olivedrab", "steelblue", "darkslategray", "mediumaquamarine" ];
 const colorsPicklist = [...colors, ...colors]; // spread operator: allows us to display each color twice
 const tileCount = colorsPicklist.length;
 
@@ -46,7 +46,7 @@ function buildTile(color) {
 
       if (revealedCount === tileCount) { // If all tiles are revealed, alert the User
         alert("You Win! The DOM is an object that represents the HTML page seen in the web browser--it kind of looks like a tree! JavaScript can access the DOM to dynamically change the content, structure, and style of the webpage.");
-        alert("These individual game tiles don't actually exist inside of the HTML document--they were born and live their lives inside of the JavaScript file! Neat!");
+        alert("These individual game tiles don't actually exist inside of the original HTML document--they were created and manipulated by the JavaScript file! Neat!");
         alert("Thanks for playing and learning about the DOM with me! Refresh to play again.");
       }
 
