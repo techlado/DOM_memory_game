@@ -45,9 +45,9 @@ function buildTile(color) {
       revealedCount += 2; // and add two to the count.
 
       if (revealedCount === tileCount) { // If all tiles are revealed, alert the User
-        alert("You Win! The DOM is an object that represents the HTML page seen in the web browser. JavaScript can access the DOM dynamically (after the HTML loads) to change the content, structure, and style of the webpage.");
+        alert("You Win! The DOM is an object that represents the HTML page seen in the web browser--it kind of looks like a tree! JavaScript can access the DOM to dynamically change the content, structure, and style of the webpage.");
         alert("These individual game tiles don't actually exist inside of the HTML document--they were born and live their lives inside of the JavaScript file! Neat!");
-        alert("Thanks for playing, and learning about DOM! Refresh to play again.");
+        alert("Thanks for playing and learning about the DOM with me! Refresh to play again.");
       }
 
       return;
